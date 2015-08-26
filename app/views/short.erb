@@ -1,10 +1,13 @@
 <div class="container" align="center">
   <h1>Welcome to the awesomest URL shortener in the internet!</h1>
 
-    <table>
+  <p>Your shortened URl:</p>
+  <p><a href="/s/<%= @url.shortened_url%>">http://sho.rt/<%= @url.shortened_url %></a></p>
+
+  <table>
       <tr height="100px">
         <td>
-          <form action='/urls' method='post'>
+          <form action="/urls" method="post">
             <p>Type in your URL to get it shortened!</p>
             <input name="url" type="text" placeholder="Your URL" autofocus>
             <input type ="submit" name="Submit!">
@@ -12,15 +15,20 @@
         </td>
       </tr>
       <tr height="30px">
-        <td align="center">
-          <a href="/sign_in"><button type='submit'>Sign in</button></a>
+        <td>
+          <form action='/sign_in' method='get' align="center">
+            <button type='submit'>Sign in</button>
+          </form>
         </td>
       </tr>
       <tr height="30px">
-        <td align="center">
-          <a href="/register"><button type='submit'>Register an account</button></a>
+        <td>
+          <form action='/register' method='get' align="center">
+            <button type='submit'>Register an account</button>
+          </form>
         </td>
       </tr>
     </table>
+
 
 </div>

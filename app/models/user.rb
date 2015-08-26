@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   # Remember to create a migration!
+  has_many :urls
 
   def self.check_duplicate(email)
     temp = self.find_by email: email
